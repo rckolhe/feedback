@@ -1,0 +1,23 @@
+#thanks {
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px;
+    background: url("../../assets/img/home-bg.jpg");
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+.thanks-container{
+    margin-top: 20%;
+}
+
+.thanks-btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thanks-btn:hover{
+    background: #333333;
+    color: #fbfafa;
+}

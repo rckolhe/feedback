@@ -11,7 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { FeedbackformComponent } from './feedbackform/feedbackform.component';
 import { SmileyformComponent } from './smileyform/smileyform.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
-import { FeedbackserviceService } from './feedbackservice.service';
+
+import { ApiserviceService } from './apiservice.service';
+import { AllformsComponent } from './allforms/allforms.component';
 
 
 
@@ -22,7 +24,8 @@ import { FeedbackserviceService } from './feedbackservice.service';
     FeedbackformComponent,
     routingComponets,
     SmileyformComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    AllformsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { FeedbackserviceService } from './feedbackservice.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [FeedbackserviceService],
+  providers: [ApiserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,8 +18,8 @@ export class SmileyformComponent implements OnInit {
     //console.log(_service.getuserdata());
     this.fdata=_service.getuserdata();
    
-    console.log("fdata:",this.fdata);
-    console.log("name:",this.fdata.name);
+   // console.log("fdata:",this.fdata);
+    //console.log("name:",this.fdata.name);
    }
 
   ngOnInit() {}
@@ -27,26 +27,23 @@ export class SmileyformComponent implements OnInit {
   onSubmit(data){
     this.smileydata=data;
     
-    console.log(this.smileydata);
+    //console.log(this.smileydata);
 
     this.alldata={...this.fdata, ...data};
-    console.log("All Data:",this.alldata);
+   // console.log("All Data:",this.alldata);
     //console.log("name:",this.alldata.name);
     //this._service.setuserdata(this.smileydata);
     
     this._service.submission(this.alldata.name,this.alldata.email,this.alldata.subject,
                             this.alldata.message,this.alldata.smiley)
-      .pipe(first())
+     /* .pipe(first())*/
       .subscribe(
         data=>{
-          this.router.navigate(['thankyou'])
+          //this.router.navigate(['thankyou']);
         },
-        error=>{
-
-        }
+        error=>{}
      );
-
-    //this.router.navigate(['/thankyou',this.smileydata]);
+     this.router.navigate(['thankyou']);
   }
 
 }

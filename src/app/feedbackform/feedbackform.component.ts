@@ -21,7 +21,7 @@ export class FeedbackformComponent implements OnInit {
   onSubmit(data){
     this.finaldata=data;
     
-    console.log(this.finaldata);
+    //console.log(this.finaldata);
     this._service.setuserdata(this.finaldata);
     
     this.router.navigate(['/smileyform',this.finaldata]);
